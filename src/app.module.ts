@@ -1,34 +1,25 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { Usuario } from './usuarios/entities/usuarios.entity';;
-import { Dieta } from './dieta/entities/dieta.entity';
-import { Treinos } from './treinos/entities/treinos.entity';
 import { UsuarioModule } from './usuarios/usuarios.module';
 import { DietaModule } from './dieta/dieta.module';
 import { TreinoModule } from './treinos/treinos.module';
+import { ProdService } from './data/services/prod.service';
+import { ConfigModule } from '@nestjs/config';
+
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-
-      username: 'root',
-      password: '1234',
-      database: 'db_vittafit',
-      entities: [Usuario, Dieta, Treinos],
-      synchronize: true
-
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRootAsync({
+      useClass: ProdService,
+      imports:[ConfigModule]
     }),
-
     UsuarioModule,
     DietaModule,
     TreinoModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}

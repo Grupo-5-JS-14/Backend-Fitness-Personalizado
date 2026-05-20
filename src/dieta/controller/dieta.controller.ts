@@ -10,7 +10,10 @@ import {
 } from "@nestjs/common";
 import { Dieta } from "../entities/dieta.entity";
 import { DietaService } from "../service/dieta.service";
+import { ApiTags } from "@nestjs/swagger";
 
+
+@ApiTags('Dietas')
 @Controller("/dietas")
 export class DietaController {
 

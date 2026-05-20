@@ -10,8 +10,11 @@ import {
 } from "@nestjs/common";
 import { TreinoService } from "../service/treinos.service";
 import { Treinos } from "../entities/treinos.entity";
+import { ApiTags } from "@nestjs/swagger";
 
 
+
+@ApiTags('Treinos')
 @Controller("treinos")
 
 export class TreinoController {
