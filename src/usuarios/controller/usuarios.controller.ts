@@ -1,7 +1,10 @@
 import { Body,Controller, Delete, Get, Param, ParseIntPipe, Post, Put} from "@nestjs/common";
 import { UsuarioService } from "../service/usuarios.service";
 import { Usuario } from "../entities/usuarios.entity";
+import { ApiTags } from "@nestjs/swagger";
 
+
+@ApiTags('Usuarios')
 @Controller("/usuarios")
 export class UsuarioController {
 
