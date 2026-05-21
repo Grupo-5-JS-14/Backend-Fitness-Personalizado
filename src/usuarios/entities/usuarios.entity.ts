@@ -39,7 +39,7 @@ export class Usuario {
     altura!: number;
 
     @IsNotEmpty()
-    @Column("decimal", { precision: 10, scale: 2 })
+    @Column("decimal", { precision: 10, scale: 2, nullable: true })
     @ApiProperty()
     peso!: number;
 
