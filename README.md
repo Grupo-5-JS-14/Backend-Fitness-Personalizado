@@ -180,19 +180,6 @@ erDiagram
 
 ---
 
-## 🧪 Testes Realizados
-
-Testes executados via **Insomnia**, cobrindo:
-
-- ✅ Cadastro de lojas
-- ✅ Listagem de todas as lojas
-- ✅ Busca por ID e por nome
-- ✅ Atualização de dados
-- ✅ Exclusão de registros
-- ✅ Simulação de erros (dados inválidos, registros inexistentes, categorias sem resultado)
-
----
-
 ## 🚀 Como Executar
 
 ### Pré-requisitos
