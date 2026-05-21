@@ -34,7 +34,7 @@ export class Usuario {
     foto!: string;
 
     @IsNotEmpty()
-    @Column("decimal", { precision: 5, scale: 2 })
+    @Column("decimal", { precision: 5, scale: 2, nullable: true })
     @ApiProperty()
     altura!: number;
 
