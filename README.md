@@ -1,98 +1,247 @@
+<h1 align="center">🏋🏻‍♀️ VittaFit</h1>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <img src="https://www.smartfit.com.br/news/wp-content/uploads/2016/09/legpress.gif" alt="VittaRun GIF" width="300"/>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  <em>Plataforma de Delivery de Alimentos Saudáveis</em>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<p align="center">
+  <img alt="NestJS" src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white"/>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img alt="TypeORM" src="https://img.shields.io/badge/TypeORM-FE0803?style=for-the-badge&logoColor=white"/>
+  <img alt="class-validator" src="https://img.shields.io/badge/class--validator-✔-brightgreen?style=for-the-badge"/>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge"/>
+</p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## 📖 Sobre o Projeto
 
-```bash
-$ npm install
+O **Vittafit** é uma aplicação backend para gerenciamento personalizado de saúde, treinos e alimentação, permitindo que usuários acompanhem seus dados físicos, dietas e rotinas de exercícios de forma centralizada..
+
+A proposta conecta usuários a trocarem experiencia **fit, de treino e dieta** — trazendo praticidade sem abrir mão da saúde.
+
+---
+
+## 🧩 Problema & Solução
+
+A maioria dos apps de delivery prioriza fast food, dificultando o acesso a opções saudáveis. O VittaRun resolve isso com uma plataforma **focada exclusivamente em alimentação saudável**.
+
+| Problema | Solução |
+|----------|---------|
+| 🚫 Usuários possuem informações de treino e dieta espalhadas em múltiplas plataformas. | ✅ Centralização dos dados em uma única aplicação |
+| 🚫 Aplicativos genéricos muitas vezes não permitem adaptar treinos e dietas para cada usuário. | ✅ Relacionamento individual entre usuários, dietas e treinos. |
+| 🚫 Muitos usuários não conseguem acompanhar métricas corporais com facilidade. | ✅ Armazenamento de informações como: Altura, Peso, Foto de perfil, dados fisicos atualizados. |
+
+---
+
+## ✨ Funcionalidades
+
+### 👤 Usuários
+
+| Método | Descrição |
+|--------|-----------|
+| `findAll()` | Lista todos os usuários cadastrados |
+| `findById()` | Retorna um usuário pelo ID |
+| `findByUsuario()` | Busca usuário pelo e-mail/usuário |
+| `create()` | Cadastra um novo usuário |
+| `update()` | Atualiza dados do usuário |
+| `delete()` | Remove um usuário do sistema |
+
+---
+
+### 🥗 Dietas
+
+| Método | Descrição |
+|--------|-----------|
+| `findAll()` | Lista todas as dietas cadastradas |
+| `findById()` | Retorna uma dieta pelo ID |
+| `create()` | Cadastra uma nova dieta |
+| `update()` | Atualiza uma dieta existente |
+| `delete()` | Remove uma dieta do sistema |
+
+---
+
+### 🏋️ Treinos
+
+| Método | Descrição |
+|--------|-----------|
+| `findAll()` | Lista todos os treinos cadastrados |
+| `findById()` | Retorna um treino pelo ID |
+| `create()` | Cadastra um novo treino |
+| `update()` | Atualiza dados de um treino |
+| `delete()` | Remove um treino do sistema |
+
+---
+
+
+### 🧠 Recursos da API
+
+| Recurso | Descrição |
+|--------|-----------|
+| `Swagger` | Documentação automática da API |
+| `TypeORM` | Persistência e manipulação de dados |
+| `PostgreSQL` | Banco de dados relacional |
+| `ValidationPipe` | Validação de dados enviados |
+| `Environment Variables` | Configuração segura de ambiente |
+| `SSL Connection` | Conexão segura com PostgreSQL Cloud |
+
+---
+
+```mermaid
+erDiagram
+
+    USUARIO {
+        int id
+        string nome
+        string usuario
+        string senha
+        string foto
+        decimal altura
+        decimal peso
+        decimal imc
+    }
+
+    DIETA {
+        int id
+        string nome
+        string descricao
+        string refeicoes
+    }
+
+    TREINOS {
+        int id
+        string nome
+        string descricao
+        string categoria
+        string duracao
+    }
+
+    USUARIO ||--o{ DIETA : possui
+    USUARIO ||--o{ TREINOS : realiza
 ```
 
-## Compile and run the project
+---
+
+## 🌐 Endpoints da API
+
+### 👤 Usuários
+
+| Método | Endpoint | Descrição |
+|--------|-----------|-----------|
+| `GET` | `/usuarios` | Lista todos os usuários |
+| `GET` | `/usuarios/:id` | Busca usuário por ID |
+| `GET` | `/usuarios/usuario/:usuario` | Busca usuário pelo e-mail/usuário |
+| `POST` | `/usuarios` | Cadastra um novo usuário |
+| `PUT` | `/usuarios` | Atualiza dados do usuário |
+| `DELETE` | `/usuarios/:id` | Remove um usuário |
+
+---
+
+### 🥗 Dietas
+
+| Método | Endpoint | Descrição |
+|--------|-----------|-----------|
+| `GET` | `/dietas` | Lista todas as dietas |
+| `GET` | `/dietas/:id` | Busca dieta por ID |
+| `POST` | `/dietas` | Cadastra uma nova dieta |
+| `PUT` | `/dietas` | Atualiza uma dieta |
+| `DELETE` | `/dietas/:id` | Remove uma dieta |
+
+---
+
+### 🏋️ Treinos
+
+| Método | Endpoint | Descrição |
+|--------|-----------|-----------|
+| `GET` | `/treinos` | Lista todos os treinos |
+| `GET` | `/treinos/:id` | Busca treino por ID |
+| `POST` | `/treinos` | Cadastra um novo treino |
+| `PUT` | `/treinos` | Atualiza um treino |
+| `DELETE` | `/treinos/:id` | Remove um treino |
+
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|------------|-----------|
+| **NestJS** | Framework backend |
+| **TypeScript** | Linguagem de desenvolvimento |
+| **MySQL** | Banco de dados relacional |
+| **TypeORM** | Integração com o banco de dados |
+| **class-validator** | Validação de dados dos DTOs |
+| **Insomnia** | Testes das requisições HTTP |
+
+---
+
+## 🧪 Testes Realizados
+
+Testes executados via **Insomnia**, cobrindo:
+
+- ✅ Cadastro de lojas
+- ✅ Listagem de todas as lojas
+- ✅ Busca por ID e por nome
+- ✅ Atualização de dados
+- ✅ Exclusão de registros
+- ✅ Simulação de erros (dados inválidos, registros inexistentes, categorias sem resultado)
+
+---
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js v20+
+- MySQL v8+
+- npm
+
+### Instalação
 
 ```bash
-# development
-$ npm run start
+# Clone o repositório
+git clone https://github.com/Grupo-5-JS-14/Backend-Fitness-Personalizado.git
 
-# watch mode
-$ npm run start:dev
+# Acesse a pasta do projeto
+cd Backend-Fitness-Personalizado
 
-# production mode
-$ npm run start:prod
+# Instale as dependências
+npm i
 ```
 
-## Run tests
+### Rodando a aplicação
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:dev
 ```
 
-## Deployment
+> A API estará disponível em `http://localhost:4000`
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+---
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## 👥 Equipe
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+Projeto desenvolvido pela turma **JavaScript 14** da **Generation Brasil**:
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+| Nome |
+|------|
+| <a href="https://github.com/DougSan7" target="_blank" rel="noopener noreferrer">Douglas Santos</a> - P.O |
+| <a href="https://github.com/Dessxevy" target="_blank" rel="noopener noreferrer">Andressa Andrade</a> - Dev|
+| <a href="https://github.com/kayanedvlsantos-create">Kay Ira</a> - Dev |
+| <a href="https://github.com/lohannab" target="_blank" rel="noopener noreferrer">Lohanna</a> - Dev |
+| <a href="https://github.com/gcoutinhoo" target="_blank" rel="noopener noreferrer">Gabriel Coutinho</a> - Dev |
+| <a href="https://github.com/kayanedvlsantos-create">Bruna Zuppini</a> - Dev Tester|
+| <a href="https://github.com/luhdias-png" target="_blank" rel="noopener noreferrer">Andre Lucas</a> - Dev Tester|
 
-## Resources
+> São Paulo – SP · 2026
 
-Check out a few resources that may come in handy when working with NestJS:
+---
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+## 📄 Licença
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Este projeto está sob a licença **MIT**.
