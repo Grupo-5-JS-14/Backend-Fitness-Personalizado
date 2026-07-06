@@ -17,7 +17,7 @@ export class DevService implements TypeOrmOptionsFactory{
             host: 'localhost',
             port: 3306,
             username: 'root',
-            password: '110294',
+            password: 'root',
             database:'db_vittafit',
             entities: [Usuario, Treinos, Dieta ],
             synchronize: true,

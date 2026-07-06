@@ -6,14 +6,17 @@ import {
     Param,
     ParseIntPipe,
     Post,
-    Put
+    Put,
+    UseGuards
 } from "@nestjs/common";
 import { Dieta } from "../entities/dieta.entity";
 import { DietaService } from "../service/dieta.service";
-import { ApiTags } from "@nestjs/swagger";
-
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
+import { AuthGuard } from "@nestjs/passport";
 
 @ApiTags('Dietas')
+@ApiBearerAuth()
+@UseGuards(AuthGuard('jwt'))
 @Controller("/dietas")
 export class DietaController {
 

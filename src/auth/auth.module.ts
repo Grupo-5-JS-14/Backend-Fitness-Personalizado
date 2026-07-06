@@ -1,5 +1,4 @@
 import { forwardRef, Module } from "@nestjs/common";
-
 import { PassportModule } from "@nestjs/passport";
 import { JwtModule } from "@nestjs/jwt";
 import { jwtConstants } from "./constants/constants";

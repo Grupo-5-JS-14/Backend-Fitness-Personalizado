@@ -15,7 +15,6 @@ export class Dieta {
     @ApiProperty()
     imc?: number;
 
-
     @IsNotEmpty()
     @Column()
     @ApiProperty()

@@ -32,24 +32,33 @@ export class AuthService {
         return null
     }
 
-    async login(usuarioLogin: UsuarioLogin) {
+   async login(usuarioLogin: UsuarioLogin) {
+    const buscaUsuario = await this.usuarioService.findByUsuario(usuarioLogin.usuario)
 
-        const payload = { sub: usuarioLogin.usuario }
+    if (!buscaUsuario) {
+        throw new UnauthorizedException('Usuário ou senha inválidos');
+    }
 
-        const buscaUsuario = await this.usuarioService.findByUsuario(usuarioLogin.usuario)
+    const matchPassword = await this.bcrypt.compararSenha(
+        usuarioLogin.senha,
+        buscaUsuario.senha
+    )
 
-        if (!buscaUsuario) {
-            throw new UnauthorizedException('Usuário não encontrado');
-        }
+    if (!matchPassword) {
+        throw new UnauthorizedException('Usuário ou senha inválidos');
+    }
 
-        return {
-            id: buscaUsuario.id,
-            nome: buscaUsuario.nome,
-            usuario: usuarioLogin.usuario,
-            senha: '',
-            foto: buscaUsuario.foto,
-            token: `Bearer ${this.jwtService.sign(payload)}`,
+    const payload = {
+        sub: buscaUsuario.id,
+        usuario: buscaUsuario.usuario
+    }
 
-        }
+    return {
+        id: buscaUsuario.id,
+        nome: buscaUsuario.nome,
+        usuario: buscaUsuario.usuario,
+        foto: buscaUsuario.foto,
+        token: `Bearer ${this.jwtService.sign(payload)}`,
     }
 }
+    }

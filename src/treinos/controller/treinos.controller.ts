@@ -6,15 +6,17 @@ import {
     Param,
     ParseIntPipe,
     Post,
-    Put
+    Put,
+    UseGuards
 } from "@nestjs/common";
 import { TreinoService } from "../service/treinos.service";
 import { Treinos } from "../entities/treinos.entity";
-import { ApiTags } from "@nestjs/swagger";
-
-
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
+import { AuthGuard } from "@nestjs/passport";
 
 @ApiTags('Treinos')
+@ApiBearerAuth()
+@UseGuards(AuthGuard('jwt'))
 @Controller("treinos")
 
 export class TreinoController {
